@@ -1,18 +1,11 @@
-import { useRef } from "react";
-
-function FunctionRef()
-{
-    const inputVal=useRef(null);
-    function clickHandler()
-    {
-        console.log(inputVal.current.focus())
-    }
-
+import React from 'react';
+const FunctionRef=React.forwardRef((props,ref)=>{
     return(
         <div>
-            <input ref={inputVal}></input>
-            <button onClick={clickHandler}>Click ME</button>
+            <input ref={ref}></input>
         </div>
     )
-}
+})
 export default FunctionRef;
+
+//Ref forwarding is a technique for automatically passing a ref through a component to one of its children. 

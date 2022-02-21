@@ -1,0 +1,942 @@
+what is library?
+A library provides a set of helper functions/objects/modules which your application code calls for specific functionality. 
+
+
+
+
+what is framework?
+framework is itself an application, it has a wider scope and includes almost everything necessary to make a user 
+application as per his own needs.
+
+
+
+
+
+what is difference between a library and a framework?
+Both frameworks and libraries are code written by someone else that is used to help solve common problems.
+The technical difference between a framework and library lies in a term called inversion of control.
+When we use a library, we are in charge of the flow of the application. we are choosing when and where to call the library. 
+When we use a framework, the framework is in charge of the flow. It provides some places for you to plug in your code.
+Frameworks are more opinionated.They attempt to define the level of freedom a developer has when structuring their code.
+
+
+
+
+
+what is react?
+ReactJS is a declarative, efficient, and flexible JavaScript library for building reusable UI components. 
+It is an open-source, component-based
+front end library responsible only for the view layer of the application. 
+
+
+
+
+
+History of react?
+It was created by Jordan Walke, who was a software engineer at Facebook. It was initially developed and maintained 
+by Facebook and was later used in its products like WhatsApp & Instagram. Facebook developed ReactJS in 2011 
+in its newsfeed section, but it was released to the public in the month of May 2013.
+
+
+
+
+
+why react is library not a framework?
+The React and React DOM libraries give us the means of building a user interface with the JSX syntax, plus powerful
+state management tools via hooks, among other things.
+However, React itself does not include many of the React-specific libraries you're going to need for most projects. 
+Angular and Vue, by comparison, include many more tools all bundled within the core package itself.
+
+
+
+
+
+what is react application all about why we use react so much to create applications  it why it is so popular?
+A ReactJS application is made up of multiple components, each component responsible for outputting a small, reusable piece 
+of HTML code. The components are the heart of all React applications. These Components can be nested with other components
+to allow complex applications to be built of simple building blocks. 
+Today, many JavaScript frameworks are available in the market(like angular, node), but still, React came into the market 
+and gained popularity amongst them. The previous frameworks follow the traditional data flow structure, which uses the 
+DOM.when any modifications were done, then each time a new DOM is created for the same page. This repeated creation of 
+DOM makes unnecessary memory wastage and reduces the performance of the application.Therefore, a new technology ReactJS 
+framework invented which remove this drawback.ReactJS uses virtual DOM based mechanism to fill data in HTML DOM. 
+The virtual DOM works fast as it only changes individual DOM elements instead of reloading complete DOM every time.
+1.It allows developers to write their apps within JavaScript. JSX is one of the greatest features:
+
+jsx stands for javascript syntax extension. JSX is basically a template language, but it comes with the full power of JavaScript.
+a.JSX helps us in keeping our code simpler and elegant when writing large pieces of code.
+b.According to the React docs, most people find it helpful as a visual aid when working with UI inside the JavaScript code.
+c.JSX also allows React to show more useful error and warning messages.
+d.If one is familiar with HTML, it is quite easy to use JSX when building React application
+e.Faster than normal JavaScript as it performs optimizations while translating to regular JavaScript
+
+2.Components allow developers to break down complex UI:
+
+ReactJS application is made up of multiple components, and each component has its own logic and controls. These components can be reusable which help you to maintain the code when working on larger scale projects.
+
+3.It uses Virtual DOM that makes the app fast:
+
+Whenever any modifications happen in the web application, the entire UI is re-rendered in virtual DOM representation. Then it checks the difference between the previous DOM representation and new DOM. Once it has done, the real DOM will update only the things that have actually changed. This makes the application faster, and there is no wastage of memory.
+
+4.it allows to reuse the codes to complete their projects faster:
+
+We know that ReactJS is a component-based approach which makes the code reusable as your need. This makes it simple to use and learn.
+
+5.ReactJS has become highly popular because of its extra simplicity and flexibility:
+
+ReactJS uses JSX file which makes the application simple and to code as well as understand. 
+
+6.One-way Data Binding:
+
+
+
+
+
+
+
+Define Ways to install ReactJS?
+There are two ways to set up an environment for successful ReactJS application.
+1.Using the npm command
+2.Using the create-react-app command
+
+1. Using the npm command:
+NodeJS and NPM are the platforms need to develop any ReactJS application. Create a root folder with the name reactApp on the desktop or where you want. 
+Now, you need to create a package.json file.(npm init -y).
+After creating a package.json file, you need to install react and its DOM packages(npm i react react-dom --save)
+install webpack then .Webpack is used for module packaging, development, and production pipeline automation. (npm i webpack webpack-dev-server webpack-cli --save)
+install babel .Babel is a JavaScript compiler and transpiler used to convert one source code to others. It compiles React JSX and ES6 to ES5 JavaScript which can be run on all browsers. (npm install babel-core babel-loader babel-preset-env babel-preset-react babel-webpack-plugin --save-dev )
+To complete the installation process, you need to add the following files in your project folder. These files are index.html, App.js, main.js, webpack.config.js and, .babelrc.
+
+2. Using the create-react-app command:
+The 'create-react-app' is a tool maintained by Facebook itself.This tool is wrapping all of the required dependencies like Webpack, Babel for React project itself 
+NodeJS and NPM are the platforms need to develop any ReactJS application. 
+install React using npm package manager (npx create-react-app my-app)
+
+NPM stands for node package manager which is a largest registry and developers use this registry to share and borrow packages.
+The npx stands for Node Package Execute and it comes with the npm, when you installed npm above 5.2.0 version then automatically
+npx will installed. It is an npm package runner that can execute any package that you want from the npm registry without even installing that package.
+to run we use command npx package_name argumnets.
+
+
+
+
+
+
+
+Define file structure?
+
+1.NODE MODULE
+We can see all the "dependencies" and "devDependencies" required by our React app in node_modules.
+
+2.PUBLIC FOLDER
+Our static files are located in the public directory.
+1.favicon.ico --->This is the icon image file used by our project.
+2.index.html---->It is the template file which is served up when we run start script to launch our app. It is considered best practice not to create multiple html file in public folder instead use this file and inject react components in this file’s root div container.
+3.logo192.png---->These are react logo which is of dimension 192*192 px  and is used in the template file
+4.logo512.png---->These are react logo which is of dimension  512*512 px and is used in the template file
+5.manifest.json----> This file is used to describe our app e.g. On mobile phones
+6.robots.txt----->Defines rules for spiders, crawlers and scrapers for accessing your app.
+
+3.SOURCE FOLDER
+All of the dynamic components,css,testing will be located in the src.
+1.App.cs---->Contains styles of our react component
+2.App.js---->This file has very basic react component defined which can be replaced by our own root component
+3.App.test.js---->A very basic test(for the default app) is defined in this file 
+4.index.css---->Contains styles for general setup of our app.
+5.index.js----->This files renders our component 
+6.logo.svg----->Svg file of react logo, being used in component(App.js) by default.
+7.reportwebvitals.js----->Service worker for pre-caching the scripts files of our react app thereby improving performance.
+8.setuptests.js----->As the name suggest this files setups tests and runs them.
+
+4.GITIGNORE
+This file specifies intentionally untracked files that Git should ignore
+
+5.PACKAGE-LOCK-JSON
+it ensures that your package is consistent across various machines by storing the versions of which dependencies are installed with your package.
+
+6.PACKAGE-JSON
+This file contains various metadata that is relevant to our project. It specifies the dependencies being used in the project which helps npm setup same environment on different machine for our project.
+name - Represents the app name which was passed to create-react-app.
+version - Shows the current version.
+dependencies - List of all the required modules/versions for our app. By default, npm would install the most recent major version.
+devDependencies - Lists all the modules/versions for running the app in a development environment.
+scripts - List of all the aliases that can be used to access react-scripts commands in an efficient manner. For example, if we run npm build in the command line, it would run "react-scripts build" internally.
+
+7.README.MD
+This file can be used to define usage, build instructions, summary of project, etc.
+
+
+
+
+
+
+what are the Pros and Cons of ReactJS?
+Advantage of ReactJS:
+1. Easy to Learn and USe
+2. Creating Dynamic Web Applications Becomes Easier
+3. Reusable Components
+4. Performance Enhancement
+Disadvantage of ReactJS:
+1. The high pace of development
+2. Poor Documentation
+3. View Part
+4. JSX as a barrier
+
+
+
+
+
+what is the Difference Between AngularJS and ReactJS?
+1.AngularJS is a structural framework for developing dynamic web apps, whereas React is a javascript library that allows you to build UI components.
+2.Angular JS is based on MVC (Model View Controller) whereas React is based on Virtual DOM.
+3.Angular is based on Typescript and React is based on Javascript.
+4.AngularJS doesn’t provide adding javascript library to the source code while React allows adding javascript library to the source code.
+5.AngularJS provides testing and debugging for a complete project with a single tool whereas React requires a set of tools to perform different types of testing.
+
+
+
+
+
+what is the difference between react and react-native?
+React-Native is a framework for developing Android & iOS applications which shares 80% - 90% of Javascript code.
+While React.js is a parent Javascript library for developing web applications.
+While you use tags like <View>, <Text> very frequently in React-Native, React.js uses web html tags like <div> <h1> <h2>, which are only synonyms in dictionary of web/mobile developments.
+For React.js you need DOM for path rendering of html tags, while for mobile application: React-Native uses AppRegistry to register your app.
+
+
+
+
+
+
+what are react components?
+components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+we have two types of components--->Function and Class Components
+
+1.Functional Components:
+They are simply JavaScript functions that may or may not receive data as parameters. We can create a function that takes props(properties) as input and returns what should be rendered. 
+EXAMPLE:
+function WelcomeMessage(props) {  
+  return <h1>Welcome to the , {props.name}</h1>;  
+}  
+The functional component is also known as a stateless component because they do not hold or manage state.It is  called “stateless” components because they simply accept data and display them in some form.Component lifecycle method do not exist in functional component,because a functional component is just a plain JavaScript function, we cannot use setState() method inside component. That’s why they also get called functional stateless components.
+
+2.Class Components:
+Class components are more complex than functional components. It requires you to extend from React. Component and create a render function which returns a React element.
+EXAMPLE:
+class MyComponent extends React.Component {  
+  render() {  
+    return (  
+      <div>This is main component.</div>  
+    );  
+  }  
+}  
+The class component is also known as a stateful component because they can hold or manage local state.
+
+
+
+
+
+
+what are state?
+The state is an updatable structure that is used to contain data or information about the component. The state in a component can change over time. The change in state over time can happen as a response to user action or system event. A component with the state is known as stateful components.They are also responsible for making a component dynamic and interactive. A state represents the component's local state or information. It can only be accessed or modified inside the component or by the component directly.It can be set by using the setState() method and calling setState() method triggers UI updates. To define a state, you have to first declare a default set of values for defining the component's initial state. To do this, add a class constructor which assigns an initial state using this.state. The 'this.state' property can be rendered inside render() method.
+
+How To initialize State:
+There are two ways to initialize state in react class component:
+1.directly inside the class.
+2.inside the constructor.
+
+
+DIRECTLY INSIDE THE CLASS:
+EXAMPLE:
+import React from 'react';
+class student extends React.Component{
+    state={
+        name:"anushka"
+    };
+    render()
+    {
+        return <h1>Hello {this.state.name}</h1>;
+    }
+}
+
+INSIDE THE CONSTRUCTOR:
+EXAMPLE:
+import React, { Component } from 'react';  
+class App extends React.Component {  
+ constructor() {  
+      super();        
+      this.state = { displayBio: true };  
+      }  
+      render() {  
+          const bio = this.state.displayBio ? (  
+              <div>  
+                  <p><h3>Javatpoint is one of the best Java training institute in Noida, Delhi, Gurugram, Ghaziabad and Faridabad. We have a team of experienced Java developers and trainers from multinational companies to teach our campus students.</h3></p>   
+            </div>  
+              ) : null;  
+              return (  
+                  <div>  
+                      <h1> Welcome to JavaTpoint!! </h1>  
+                      { bio }   
+                  </div>  
+              );  
+     }  
+}  
+export default App;  
+
+
+how to Change the State:
+We can change the component state by using the setState() method and passing a new state object as the argument. 
+EXAMPLE:
+import React, { Component } from 'react';  
+class App extends React.Component {  
+ constructor() {  
+      super();        
+      this.state = { displayBio: false };  
+      console.log('Component this', this);  
+      this.toggleDisplayBio = this.toggleDisplayBio.bind(this);  
+      }  
+      toggleDisplayBio(){  
+          this.setState({displayBio: !this.state.displayBio});  
+          }  
+      render() {  
+          return (  
+              <div>  
+                  <h1>Welcome to JavaTpoint!!</h1>  
+                  {  
+                      this.state.displayBio ? (   
+                          <div>  
+                              <p><h4>Javatpoint is one of the best Java training institute in Noida, Delhi, Gurugram, Ghaziabad and Faridabad. We have a team of experienced Java developers and trainers from multinational companies to teach our campus students.</h4></p>  
+                              <button onClick={this.toggleDisplayBio}> Show Less </button>  
+                        </div>  
+                          ) : (  
+                              <div>  
+                                  <button onClick={this.toggleDisplayBio}> Read More </button>  
+                              </div>  
+                          )  
+                  }  
+             </div>  
+        )  
+    }  
+}  
+export default App;  
+
+
+
+
+
+
+what are props?
+Props stand for "Properties." They are read-only components.
+Props are arguments passed into React components.
+props are used to pass data from a parent component to a child component in React.
+Props are immutable so we cannot modify the props from inside the component. Inside the components, we can add attributes called props. These attributes are available in the component as this.props and can be used to render dynamic data in our render method.
+
+props in functional component:
+EXAMPLE:
+function welcome(props)
+{
+    return(
+       <h1>hello {props.name}</h1>
+    );
+}
+export default welcome;
+
+props in class component:
+EXAMPLE:
+import React, { Component } from 'react';  
+class App extends React.Component {  
+   render() {     
+      return (  
+          <div>  
+            <h1> Welcome to { this.props.name } </h1>    
+            <p> <h4> Javatpoint is one of the best Java training institute in Noida, Delhi, Gurugram, Ghaziabad and Faridabad. </h4> </p>          
+          </div>  
+      );  
+   }  
+}  
+export default App;  
+
+main.js:
+import React from 'react';  
+import ReactDOM from 'react-dom';  
+import App from './App.js';  
+  
+ReactDOM.render(<App name = "JavaTpoint!!" />, document.getElementById('app'));  
+
+Default Props:
+It is not necessary to always add props in the reactDom.render() element. You can also set default props directly on the component constructor. 
+EXAMPLE:
+import React, { Component } from 'react';  
+class App extends React.Component {  
+   render() {     
+      return (  
+          <div>  
+              <h1>Default Props Example</h1>  
+            <h3>Welcome to {this.props.name}</h3>   
+            <p>Javatpoint is one of the best Java training institute in Noida, Delhi, Gurugram, Ghaziabad and Faridabad.</p>          
+          </div>  
+        );  
+    }  
+}  
+App.defaultProps = {  
+   name: "JavaTpoint"  
+}  
+export default App;  
+
+main.js:
+import React from 'react';  
+import ReactDOM from 'react-dom';  
+import App from './App.js';  
+  
+ReactDOM.render(<App/>, document.getElementById('app'));  
+
+It is possible to combine both state and props in your app. You can set the state in the parent component and pass it in the child component using props.
+
+
+
+
+
+
+How to validate props?
+The props are usually required to use correctly in the component. If it is not used correctly, the components may not behave as expected. Hence, it is required to use props validation in improving react components.
+Props validation is a tool that will help the developers to avoid future bugs and problems. It is a useful way to force the correct usage of your components. It makes your code more readable. React components used special property PropTypes that help you to catch bugs by validating data types of values passed through props, although it is not necessary to define components with propTypes. However, if you use propTypes with your components, it helps you to avoid unexpected bugs.
+
+
+
+
+
+
+what is the difference between State and  Props?
+1.	Props are read-only.	State changes can be asynchronous.
+2.	Props are immutable.	State is mutable.
+3.	Props allow you to pass data from one component to other components as an argument.	State holds information about the components.
+4.	Props can be accessed by the child component.	State cannot be accessed by child components.
+5.	Props are used to communicate between components.	States can be used for rendering dynamic changes with the component.
+6.	Stateless component can have Props.	Stateless components cannot have State.
+
+
+
+
+
+
+What is Constructor?
+The constructor is a method used to initialize an object's state in a class. It automatically called during the creation of an object in a class.When you implement the constructor for a React component, you need to call super(props) method before any other statement. If you do not call super(props) method, this.props will be undefined in the constructor and can lead to bugs.
+syntax:
+Constructor(props){  
+     super(props);  
+}  
+In React, constructors are mainly used for two purposes:
+
+1.It used for initializing the local state of the component by assigning an object to this.state.
+2.It used for binding event handler methods that occur in your component.
+
+EXAMPLE:
+import React, { Component } from 'react';  
+  
+class App extends Component {  
+  constructor(props){  
+    super(props);  
+    this.state = {  
+         data: 'www.javatpoint.com'  
+      }  
+    this.handleEvent = this.handleEvent.bind(this);  
+  }  
+  handleEvent(){  
+    console.log(this.props);  
+  }  
+  render() {  
+    return (  
+      <div className="App">  
+    <h2>React Constructor Example</h2>  
+    <input type ="text" value={this.state.data} />  
+        <button onClick={this.handleEvent}>Please Click</button>  
+      </div>  
+    );  
+  }  
+}  
+export default App;  
+
+
+
+
+
+
+
+what is react component life cycle?
+In ReactJS, every component creation process involves various lifecycle methods. The lifecycle of the component is divided into four phases. They are:
+1.Initial Phase
+2.Mounting Phase
+3.Updating Phase
+4.Unmounting Phase
+
+Initial Phase:It is the birth phase of the lifecycle of a ReactJS component. Here, the component starts its journey on a way to the DOM. In this phase, a component contains the default Props and initial State. These default properties are done in the constructor of a component. 
+
+Mounting Phase:In this phase, the instance of a component is created and inserted into the DOM. It consists of the following methods.
+componentWillMount():
+This is invoked immediately before a component gets rendered into the DOM. 
+render():
+This method is defined in each and every component. 
+componentDidMount():
+This is invoked immediately after a component gets rendered and placed on the DOM.
+
+Updating Phase:Here, we get new Props and change State. This phase also allows to handle user interaction and provide communication with the components hierarchy.
+componentWillRecieveProps():
+It is invoked when a component receives new props. 
+shouldComponentUpdate():
+It is invoked when a component decides any changes/updation to the DOM.
+componentWillUpdate():
+It is invoked just before the component updating occurs. 
+render():
+This method is defined in each and every component. 
+componentDidUpdate():
+It is invoked immediately after the component updating occurs. 
+
+Unmounting Phase:
+t is the final phase of the react component lifecycle. It is called when a component instance is destroyed and unmounted from the DOM. 
+componentWillUnmount():
+This method is invoked immediately before a component is destroyed and unmounted permanently. It performs any necessary cleanup related task.
+
+EXAMPLE:
+import React from 'react';  
+  
+class App extends React.Component {  
+   constructor(props) {  
+     console.log("initial phase when component has default props and states");
+      super(props);  
+      this.state = {hello: "JavaTpoint"};  
+      this.changeState = this.changeState.bind(this)  
+   }    
+   render() {  
+     console.log("reander");
+      return (  
+         <div>  
+             <h1>ReactJS component's Lifecycle</h1>  
+             <h3>Hello {this.state.hello}</h3>  
+             <button onClick = {this.changeState}>Click Here!</button>          
+         </div>  
+      );  
+   }  
+   componentWillMount() {  
+      console.log('Component Will MOUNT!')  
+   }  
+   componentDidMount() {  
+      console.log('Component Did MOUNT!')  
+   }  
+   changeState(){  
+     console.log("states get changed");
+      this.setState({hello:"All!!- Its a great reactjs tutorial."});  
+   }  
+   componentWillReceiveProps(newProps) {      
+      console.log('Component Will Recieve Props!')  
+   }  
+   shouldComponentUpdate(newProps, newState) {  
+      return true;  
+   }  
+   componentWillUpdate(nextProps, nextState) {  
+      console.log('Component Will UPDATE!');  
+   }  
+   componentDidUpdate(prevProps, prevState) {  
+      console.log('Component Did UPDATE!')  
+   }  
+   componentWillUnmount() {  
+      console.log('Component Will UNMOUNT!')  
+   }  
+}  
+export default App;  
+
+
+
+
+
+
+
+what are react forms?
+Forms are an integral part of any modern web application. It allows the users to interact with the application as well as gather information from the users. 
+There are mainly two types of form input in React.
+1.Uncontrolled component
+2.Controlled component
+In React, the form is usually implemented by using controlled components.
+Controlled components have functions that govern the data passing into them on every onChange event, rather than grabbing the data only once, e.g., when you click a submit button. This data is then saved to state and updated with setState() method. This makes component have better control over the form elements and data.
+EXAMPLE:
+import React, { Component } from 'react';  
+class App extends React.Component {  
+    constructor(props) {  
+        super(props);  
+        this.state = {  
+            personGoing: true,  
+            numberOfPersons: 5  
+        };  
+        this.handleInputChange = this.handleInputChange.bind(this);  
+   }  
+   handleInputChange(event) {  
+       const target = event.target;  
+       const value = target.type === 'checkbox' ? target.checked : target.value;  
+       const name = target.name;  
+       this.setState({  
+           [name]: value  
+       });  
+  }  
+  render() {  
+      return (  
+          <form>  
+              <h1>Multiple Input Controlled Form Example</h1>  
+              <label>  
+                  Is Person going:  
+                  <input  
+                    name="personGoing"  
+                    type="checkbox"  
+                    checked={this.state.personGoing}  
+                    onChange={this.handleInputChange} />  
+             </label>  
+             <br />  
+             <label>  
+                 Number of persons:  
+                 <input  
+                 name="numberOfPersons"  
+                 type="number"  
+                 value={this.state.numberOfPersons}  
+                 onChange={this.handleInputChange} />  
+             </label>  
+         </form>  
+     );  
+  }  
+}  
+export default App;  
+
+The uncontrolled input is similar to the traditional HTML form inputs. The DOM itself handles the form data. Here, the HTML elements maintain their own state that will be updated when the input value changes. 
+
+
+
+
+
+
+what is the difference between controll and uncontroll components?
+1.	It does not maintain its internal state.	            It maintains its internal states.
+2.	Here, data is controlled by the parent component.	    Here, data is controlled by the DOM itself.
+3.	It accepts its current value as a prop.	                It uses a ref for their current values.
+4.	It allows validation control.	                        It does not allow validation control.
+5.	It has better control over the form elements and data.	It has limited control over the form elements and data.
+
+
+
+
+
+
+
+
+
+what are react event?
+An event is an action that could be triggered as a result of the user action or system generated event. For example, a mouse click, loading of a web page, pressing a key, window resizes, and other interactions are called events.The react event handling system is known as Synthetic Events. The synthetic event is a cross-browser wrapper of the browser's native event.
+Handling events with react have some syntactic differences from handling events on DOM. These are:
+1.React events are named as camelCase instead of lowercase.
+2.With JSX, a function is passed as the event handler instead of a string. 
+EXAMPLE:
+<button onClick={showMessage}>  
+      Hello JavaTpoint  
+</button> 
+3. In react, we cannot return false to prevent the default behavior. We must call preventDefault event explicitly to prevent the default behavior. 
+EXAMPLE: 
+function Form() {
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log('You clicked submit.');
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <button type="submit">Submit</button>
+    </form>
+  );
+} 
+Here, e is a synthetic event.
+You have to be careful about the meaning of this in JSX callbacks. In JavaScript, class methods are not bound by default. 
+EXAMPLE:
+class Toggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
+
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        {this.state.isToggleOn ? 'ON' : 'OFF'}
+      </button>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Toggle />,
+  document.getElementById('root')
+);
+
+SECOND WAY TO BIND:
+class LoggingButton extends React.Component {
+  // This syntax ensures `this` is bound within handleClick.
+  // Warning: this is experimental syntax.
+  handleClick = () => {
+    console.log('this is:', this);
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        Click me
+      </button>
+    );
+  }
+}
+
+THIRD WAY OF BINDING:
+class LoggingButton extends React.Component {
+  handleClick() {
+    console.log('this is:', this);
+  }
+
+  render() {
+    // This syntax ensures `this` is bound within handleClick
+    return (
+      <button onClick={() => this.handleClick()}>
+        Click me
+      </button>
+    );
+  }
+}
+The problem with this syntax is that a different callback is created each time the LoggingButton renders. In most cases, this is fine. However, if this callback is passed as a prop to lower components, those components might do an extra re-rendering. We generally recommend binding in the constructor or using the class fields syntax, to avoid this sort of performance problem.
+
+How to Pass Arguments to Event Handlers:
+<button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
+<button onClick={this.deleteRow.bind(this, id)}>Delete Row</button>
+
+
+
+
+
+
+
+
+
+
+what is React Conditional Rendering?
+in order to render componenets depending upon the behaviour of our application we go with conditional rendering.
+In React, conditional rendering works the same way as the conditions work in JavaScript. 
+There is more than one way to do conditional rendering in React. They are given below.
+1.if-else
+2.ternary operator
+3.logical && operator
+4.element variable
+
+
+EXAMPLE OF IF:
+function UserLoggin(props) {  
+  return <h1>Welcome back!</h1>;  
+}  
+function GuestLoggin(props) {  
+  return <h1>Please sign up.</h1>;  
+}  
+function SignUp(props) {  
+  const isLoggedIn = props.isLoggedIn;  
+  if (isLoggedIn) {  
+    return <UserLogin />;  
+  }  
+  return <GuestLogin />;  
+}  
+  
+ReactDOM.render(  
+  <SignUp isLoggedIn={false} />,  
+  document.getElementById('root')  
+);  
+
+EXAMPLE OF TERNARY OPERATOR:
+render() {  
+  const isLoggedIn = this.state.isLoggedIn;  
+  return (  
+    <div>  
+      Welcome {isLoggedIn ? 'Back' : 'Please login first'}.  
+    </div>  
+  );  
+}  
+
+EXAMPLE OF LOGICAL && OPERATOR:
+import React from 'react';   
+import ReactDOM from 'react-dom';   
+// Example Component   
+function Example()   
+{   
+    return(<div>   
+            {   
+                (10 > 5) && alert('This alert will be shown!')  
+            }   
+           </div>   
+        );   
+}   
+
+EXAMPLE OF SWITCH:
+function NotificationMsg({ text}) {  
+  switch(text) {  
+    case 'Hi All':  
+      return <Message: text={text} />;  
+    case 'Hello JavaTpoint':  
+      return <Message text={text} />;  
+    default:  
+      return null;  
+  }  
+}  
+
+Preventing Component form Rendering:
+we will have to return null instead of its render output. 
+import React from 'react';   
+import ReactDOM from 'react-dom';   
+function Show(props)   
+{   
+    if(!props.displayMessage)   
+        return null;   
+    else  
+        return <h3>Component is rendered</h3>;   
+}   
+ReactDOM.render(   
+    <div>   
+        <h1>Message</h1>  
+        <Show displayMessage = {true} />    
+    </div>,    
+    document.getElementById('app')   
+);  
+
+
+
+
+
+
+
+what are react list?
+Lists are used to display data in an ordered format and mainly used to display menus on websites. In React, Lists can be created in a similar way as we create lists in JavaScript. The map() function is used for traversing the lists. 
+EXAMPLE:
+import React from 'react';   
+import ReactDOM from 'react-dom';   
+  
+function NameList(props) {  
+  const myLists = props.myLists;  
+  const listItems = myLists.map((myList) =>  
+    <li>{myList}</li>  
+  );  
+  return (  
+    <div>  
+        <h2>Rendering Lists inside component</h2>  
+              <ul>{listItems}</ul>  
+    </div>  
+  );  
+}  
+const myLists = ['Peter', 'Sachin', 'Kevin', 'Dhoni', 'Alisa'];   
+ReactDOM.render(  
+  <NameList myLists={myLists} />,  
+  document.getElementById('app')  
+);  
+export default App;  
+
+
+
+
+
+
+
+what are react keys?
+A key is a unique identifier. In React, it is used to identify which items have changed, updated, or deleted from the Lists. It is useful when we dynamically created components or when the users alter the lists. It also helps to determine which components in a collection needs to be re-rendered instead of re-rendering the entire set of components every time.
+Keys should be given inside the array to give the elements a stable identity. The best way to pick a key as a string that uniquely identifies the items in the list.
+
+EXAMPLE:
+import React from 'react';   
+import ReactDOM from 'react-dom';   
+function MenuBlog(props) {  
+  const content = props.data.map((show) =>  
+    <div key={show.id}>  
+      <h3>{show.title}: {show.content}</h3>      
+    </div>  
+  );  
+  return (  
+    <div>   {content}  </div>  
+  );  
+}  
+const data = [  
+  {id: 1, title: 'First', content: 'Welcome to JavaTpoint!!'},  
+  {id: 2, title: 'Second', content: 'It is the best ReactJS Tutorial!!'},  
+  {id: 3, title: 'Third', content: 'Here, you can learn all the ReactJS topics!!'}  
+];  
+ReactDOM.render(  
+  <MenuBlog data={data} />,  
+  document.getElementById('app')  
+);  
+export default App;  
+
+
+
+
+
+
+
+
+what are render props?
+The term “render prop” refers to a technique for sharing code between React components using a prop whose value is a function.
+A component with a render prop takes a function that returns a React element and calls it instead of implementing its own render logic.
+Libraries that use render props include React Router, Downshift and Formik.
+
+
+
+
+
+
+what are React Router?
+Routing is a process in which a user is directed to different pages based on their action or request. ReactJS Router is mainly used for developing
+Single Page Web Applications. 
+React Router is a standard library system built on top of the React and used to create routing in the React application using React Router Package.
+
+what is the Need of React Router?
+React Router plays an important role to display multiple views in a single page application. 
+
+How we can do React Router Installation?
+To use react routing, first, you need to install react-router-dom modules in your application.
+
+how many Components in React Router?
+There are two types of router components:
+
+<BrowserRouter>: It is used for handling the dynamic URL.
+<HashRouter>: It is used for handling the static request.
+
+explain <Link> vs <NavLink>
+The Link component allows navigating the different routes on the websites, whereas NavLink component is used to add styles to the active routes.
+
+what are the Benefits Of React Router?
+In this, it is not necessary to set the browser history manually.
+Link uses to navigate the internal links in the application. It is similar to the anchor tag.
+It uses Switch feature for rendering.
+The Router needs only a Single Child element.
+In this, every component is specified in .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
